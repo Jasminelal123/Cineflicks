@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import Header from './Header';
-import bg from './utils/bg.jpg';
-import { checkvalidateData } from './utils/Validate';
+import bg from '../utils/bg.jpg';
+import {checkvalidateData} from '../utils/Validate';
 import {  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from './utils/firebase';
+import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -64,9 +64,9 @@ const Login = () => {
 
   return (
     <div className=''>
-      <Header />
-      <div className='absolute'>
-        <img src={bg} alt='bg' />
+      <Header/>
+      <div className=' w-[100%] bg-custom-image bg-cover bg-center bg-gradient-to-b from-black absolute -z-10'>
+        <img className='h-[100%] w-full' src={bg} alt='bg' />
       </div>
       <form onSubmit={(e) => e.preventDefault()} className='absolute w-4/12 p-12 my-36 mx-auto right-0 left-0 bg-black bg-opacity-80 rounded-lg text-white'>
         <h1 className='font-bold text-white text-3xl py-4 m-2 '>{isSignInForm ? 'Sign In' : 'Sign Up'}</h1>
