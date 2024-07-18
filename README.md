@@ -1,4 +1,4 @@
-# netflix-gpt
+# Cineflicks
 - create React App
 - configured TailwindCSS
 -
